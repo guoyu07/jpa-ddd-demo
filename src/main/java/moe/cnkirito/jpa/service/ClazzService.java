@@ -35,7 +35,6 @@ public class ClazzService {
         clazzRepo.saveAndFlush(clazz);
         Clazz updateClazz = clazzRepo.findOne(getSpecification(clazzSpec));
         Assert.isTrue(updateClazz.getStudents().size() == 1, "数量期望为1");
-        System.out.println(updateClazz.getStudents().size());
     }
 
     private Specification<Clazz> getSpecification(Clazz clazz) {

@@ -19,7 +19,7 @@ public class Clazz {
 
     private String name;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "clazz")
+    @OneToMany(cascade = {CascadeType.ALL}, orphanRemoval = true, fetch = FetchType.LAZY, mappedBy = "clazz")
     private List<Student> students;
 
     public String getId() {
